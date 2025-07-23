@@ -73,7 +73,7 @@ class YoutubePlayVideo extends StatelessWidget {
                         ),
                         onPressed: () {
 
-                          YoutubePlayVideocontroller.login();
+                          YoutubePlayVideocontroller.like();
                         },
                       ),
                       const Text("12K", style: TextStyle(color: Colors.white)),

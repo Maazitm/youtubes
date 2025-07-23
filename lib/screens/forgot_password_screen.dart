@@ -1,28 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:youtube/color/app_color.dart';
 
-class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({super.key});
-
-  @override
-  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
-}
-
-class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+class ForgotPasswordScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
-
-  @override
-  void dispose() {
-    _emailController.dispose();
-    super.dispose();
-  }
-
+  ForgotPasswordScreen({super.key});
   Future<void> _method() async {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(
-      const SnackBar(content: Text("rest like send ✅✅✅")),
-    );
     await Future.delayed(const Duration(seconds: 1));
   }
 
@@ -52,7 +35,11 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.lock_outline, color: AppColor.primarycolor, size: 64),
+            const Icon(
+              Icons.lock_outline,
+              color: AppColor.primarycolor,
+              size: 64,
+            ),
             const SizedBox(height: 24),
             const Text(
               'Reset your password',

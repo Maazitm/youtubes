@@ -1,16 +1,13 @@
+
+
 import 'package:flutter/material.dart';
 
-class Subscription extends StatefulWidget {
+class Subscription extends StatelessWidget {
   const Subscription({super.key});
 
   @override
-  State<Subscription> createState() => _SubscriptionState();
-}
-
-class _SubscriptionState extends State<Subscription> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       backgroundColor: Colors.black,
 
       appBar: AppBar(

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 class YoutubePlayController extends GetxController {
   var ifliked = false.obs;
 
-  void login() {
+  void like() {
     // handle like action
     if (ifliked == true) {
       ifliked.value = false;
