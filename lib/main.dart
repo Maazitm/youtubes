@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => ForgotPasswordScreen(),
+        '/': (context) => Tabs(),
         '/loginscreen': (context) => LoginScreen(),
         '/shorts': (context) => Shorts(),
         '/tabs': (context) => Tabs(),

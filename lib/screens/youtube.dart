@@ -30,7 +30,7 @@ class _YoutubeState extends State<Youtube> {
       _selectedIndex = index;
       if (index == 1) {
         // Navigator.pushNamed(context, "shorts");
-         Get.toNamed(AppRoutes.shorts);
+        Get.toNamed(AppRoutes.shorts);
       }
     });
   }
@@ -57,7 +57,7 @@ class _YoutubeState extends State<Youtube> {
               GestureDetector(
                 onTap: () {
                   Get.toNamed(AppRoutes.notifications);
-                 // Navigator.pushNamed(context, AppRoutes.notifications);
+                  // Navigator.pushNamed(context, AppRoutes.notifications);
                 },
 
                 child: Icon(Icons.notifications, size: 30, color: Colors.white),
@@ -79,7 +79,7 @@ class _YoutubeState extends State<Youtube> {
                 //   AppRoutes.youtubePlayVideo
 
                 // );
-                 Get.toNamed(AppRoutes.youtubePlayVideo);
+                Get.toNamed(AppRoutes.youtubePlayVideo);
               },
               child: Container(
                 decoration: BoxDecoration(color: Colors.grey.shade300),
@@ -87,7 +87,7 @@ class _YoutubeState extends State<Youtube> {
                 width: double.infinity,
 
                 child: Image.network(
-                  "https://images5.alphacoders.com/468/468447.jpg",
+                  "https://i.ytimg.com/vi/tJ2Vp0udxp8/maxresdefault.jpg",
                   fit: BoxFit.cover,
                 ),
               ),
@@ -98,12 +98,12 @@ class _YoutubeState extends State<Youtube> {
                 SizedBox(width: 20),
                 Container(
                   height: height * 0.06,
-                  width: Width*0.15,
+                  width: Width * 0.15,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       image: NetworkImage(
-                        "https://static.vecteezy.com/system/resources/thumbnails/022/024/539/small_2x/tom-and-jerry-cartoon-free-vector.jpg",
+                        "https://animationvisarts.com/wp-content/uploads/2023/09/qfFFFhnM8LwZnjpTECN3oB-1-1-edited.jpg",
                       ),
                     ),
                   ),
@@ -114,15 +114,17 @@ class _YoutubeState extends State<Youtube> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Tom and Jerry",
+                      "Mickey Mouse ",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
+
                     Text(
-                      "tom and jerry play cartoon #child",
+                      "NEW! Mickey Mouse Clubhouse+ First ",
+                      overflow: TextOverflow.clip,
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
