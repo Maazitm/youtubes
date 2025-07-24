@@ -205,7 +205,7 @@ class _YoutubePlayVideoState extends State<YoutubePlayVideo> {
     return Obx(() {
       return Scaffold(
         appBar: AppBar(
-          title: const Text("YouTube Video"),
+          title: const Text(""),
           backgroundColor: Colors.black,
           foregroundColor: Colors.white,
         ),

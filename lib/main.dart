@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:youtube/screens/create_new_account_screen.dart';
-import 'package:youtube/screens/dummy_screen.dart';
 import 'package:youtube/screens/forgot_password_screen.dart';
-import 'package:youtube/screens/homepage_getx.dart';
 import 'package:youtube/screens/library.dart';
 import 'package:youtube/screens/login_screen.dart';
-import 'package:youtube/screens/nomal_screen.dart';
 import 'package:youtube/screens/notifications.dart';
 import 'package:youtube/screens/shorts.dart';
 import 'package:youtube/screens/subscription.dart';
@@ -15,19 +12,25 @@ import 'package:youtube/screens/tabs.dart';
 import 'package:youtube/screens/youtube.dart';
 import 'package:youtube/screens/youtube_play_video.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Ensure bindings initialized
+
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  String? token = prefs.getString('token'); // Get saved token
+
+  runApp(MyApp(token: token)); // Pass token to app
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final String? token;
+  const MyApp({super.key, required this.token});
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/',
+      debugShowCheckedModeBanner: false,
+      initialRoute: token == null ? '/loginscreen' : '/tabs',
       routes: {
-        '/': (context) => DummyScreen(),
         '/loginscreen': (context) => LoginScreen(),
         '/shorts': (context) => Shorts(),
         '/tabs': (context) => Tabs(),
@@ -39,7 +42,11 @@ class MyApp extends StatelessWidget {
         '/youtube_screen': (context) => Youtube(),
         '/YoutubePlayVideo': (context) => YoutubePlayVideo(),
       },
-      debugShowCheckedModeBanner: false,
     );
   }
 }
+// Future<void> logout() async {
+//   SharedPreferences prefs = await SharedPreferences.getInstance();
+//   await prefs.clear(); // or prefs.remove('isLoggedIn');
+//   Get.offAllNamed(AppRoutes.login); // Redirect to login screen
+// }

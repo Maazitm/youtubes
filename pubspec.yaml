@@ -41,10 +41,14 @@ dependencies:
   #for offline video play
   video_player: ^2.10.0
 
+
+  #use firebase in flutter application 
+  firebase_core: ^2.30.0
+  firebase_auth: ^4.17.6
   
 
   
-   
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:

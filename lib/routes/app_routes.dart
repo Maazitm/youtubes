@@ -1,6 +1,7 @@
 class AppRoutes {
 static const String firstscreen = '/';
 static const String login = "/loginscren";
+static const String register = "/register";
 static const String shorts ="/shorts";
 static const String tabs ="/tabs";
 static const String forgotpassword ="/forgot_Password";
