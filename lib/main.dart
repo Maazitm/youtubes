@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:youtube/screens/create_new_account_screen.dart';
+import 'package:youtube/screens/dummy_screen.dart';
 import 'package:youtube/screens/forgot_password_screen.dart';
 import 'package:youtube/screens/homepage_getx.dart';
 import 'package:youtube/screens/library.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => Tabs(),
+        '/': (context) => DummyScreen(),
         '/loginscreen': (context) => LoginScreen(),
         '/shorts': (context) => Shorts(),
         '/tabs': (context) => Tabs(),

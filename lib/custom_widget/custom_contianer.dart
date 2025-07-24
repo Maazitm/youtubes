@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:youtube/color/app_color.dart';
 
 class CustomContianer extends StatelessWidget {
-  final double height;
-  final double width;
+  
+  double height;
+  double width;
   final Color Colorss;
   final String imageurl;
   final double apnaradius;
-  const CustomContianer({
+  CustomContianer({
     super.key,
-    required this.height,
+    this.height = 0,
     required this.width,
     this.Colorss = AppColor.primarycolor,
     required this.imageurl,
@@ -18,8 +19,10 @@ class CustomContianer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenwidth = MediaQuery.of(context).size.width;
     return Container(
-      height: height,
+      height:   height == null ? screenHeight * 0.5 : height,
 
       width: width,
       decoration: BoxDecoration(

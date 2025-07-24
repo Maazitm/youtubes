@@ -273,8 +273,8 @@ class _YoutubePlayVideoState extends State<YoutubePlayVideo> {
               leading: CircleAvatar(
                 backgroundColor: AppColor.primarycolor,
                 child: Container(
-                  height: screenHeight * 0.1,
-                  width: screenWidth * 0.1,
+                  height: screenHeight * 1,
+                  width: screenWidth * 1,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
