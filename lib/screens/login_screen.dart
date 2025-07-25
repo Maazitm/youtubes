@@ -57,15 +57,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 32),
                   // Email Field
                   TextFormField(
-                    style: const TextStyle(
-                      color:
-                          Colors.blue,
-                      fontSize: 16,
-                    ),
+                    style: const TextStyle(color: Colors.blue, fontSize: 16),
 
-
-
-                    controller:loginController.emailCtrl,
+                    controller: loginController.emailCtrl,
                     decoration: InputDecoration(
                       labelText: "Email or phone",
                       border: OutlineInputBorder(
@@ -86,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 20),
                   // Password Field
                   TextFormField(
-                       controller: loginController.passwordCtrl,
+                    controller: loginController.passwordCtrl,
                     obscureText: magic,
 
                     decoration: InputDecoration(

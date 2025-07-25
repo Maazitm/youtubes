@@ -12,8 +12,9 @@ class Youtube extends StatefulWidget {
 }
 
 Future<void> logout() async {
- // SharedPreferences prefs = await SharedPreferences.getInstance();
- // await prefs.clear(); // or prefs.remove('isLoggedIn');
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.clear(); 
+   prefs.remove('token');
   Get.offNamed(AppRoutes.login); // Redirect to login screen
 }
 
@@ -69,7 +70,16 @@ class _YoutubeState extends State<Youtube> {
               Icon(Icons.search, size: 30, color: Colors.white),
               IconButton(
                 onPressed: () {
-                  logout;
+                  Get.defaultDialog(
+                    title: "Logout",
+                    middleText: "Are you sure you want to logout?",
+                    textConfirm: "Yes",
+                    textCancel: "No",
+                    confirmTextColor: Colors.white,
+                    onConfirm: () {
+                      logout();
+                    },
+                  );
                 },
                 icon: Icon(Icons.more_vert),
                 iconSize: 30,
