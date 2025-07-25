@@ -62,6 +62,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           Colors.blue,
                       fontSize: 16,
                     ),
+
+
+
                     controller:loginController.emailCtrl,
                     decoration: InputDecoration(
                       labelText: "Email or phone",

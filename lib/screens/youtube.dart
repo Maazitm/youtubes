@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:youtube/routes/app_routes.dart';
-import 'package:youtube/screens/login_screen.dart';
-import 'package:youtube/screens/notifications.dart';
-import 'package:youtube/screens/shorts.dart';
-import 'package:youtube/screens/youtube_play_video.dart';
 
 class Youtube extends StatefulWidget {
   const Youtube({super.key});
 
   @override
   State<Youtube> createState() => _YoutubeState();
+}
+
+Future<void> logout() async {
+ // SharedPreferences prefs = await SharedPreferences.getInstance();
+ // await prefs.clear(); // or prefs.remove('isLoggedIn');
+  Get.offNamed(AppRoutes.login); // Redirect to login screen
 }
 
 class _YoutubeState extends State<Youtube> {
@@ -41,7 +44,7 @@ class _YoutubeState extends State<Youtube> {
     final height = size.height;
     final Width = size.width;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(221, 52, 50, 50),
+      backgroundColor: const Color.fromARGB(221, 64, 28, 28),
       appBar: AppBar(
         leading: Image.network(
           "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png",
@@ -64,6 +67,14 @@ class _YoutubeState extends State<Youtube> {
               ),
               SizedBox(width: 10),
               Icon(Icons.search, size: 30, color: Colors.white),
+              IconButton(
+                onPressed: () {
+                  logout;
+                },
+                icon: Icon(Icons.more_vert),
+                iconSize: 30,
+                color: Colors.white,
+              ),
             ],
           ),
         ],

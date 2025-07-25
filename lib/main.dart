@@ -45,8 +45,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// Future<void> logout() async {
-//   SharedPreferences prefs = await SharedPreferences.getInstance();
-//   await prefs.clear(); // or prefs.remove('isLoggedIn');
-//   Get.offAllNamed(AppRoutes.login); // Redirect to login screen
-// }
