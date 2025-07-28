@@ -5,10 +5,10 @@ class YoutubePlayController extends GetxController {
 
   void like() {
     // handle like action
-    if (ifliked == true) {
-      ifliked.value = false;
-    } else {
+    if (ifliked ==false) {
       ifliked.value = true;
+    } else {
+      ifliked.value = false;
     }
   }
 }
