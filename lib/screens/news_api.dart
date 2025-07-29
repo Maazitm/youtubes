@@ -58,6 +58,7 @@ class NewsScreen extends StatelessWidget {
                           top: Radius.circular(12),
                         ),
                         child: Image.network(
+                         errorBuilder: (context, error, stackTrace) =>  Image.network("https://www.shutterstock.com/shutterstock/videos/3417111043/thumb/7.jpg?ip=x480"),
                           article.urlToImage!,
                           width: double.infinity,
                           height: 180,
