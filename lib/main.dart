@@ -9,6 +9,7 @@ import 'package:youtube/screens/notifications.dart';
 import 'package:youtube/screens/shorts.dart';
 import 'package:youtube/screens/subscription.dart';
 import 'package:youtube/screens/tabs.dart';
+import 'package:youtube/screens/news_api.dart';
 import 'package:youtube/screens/youtube.dart';
 import 'package:youtube/screens/youtube_play_video.dart';
 
@@ -29,8 +30,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: token == null ? '/loginscreen' : '/tabs',
+      initialRoute: token == null ? '/loginscreen' : '/dummyscreen',
       routes: {
+        '/dummyscreen': (context) => NewsScreen(),
         '/loginscreen': (context) => LoginScreen(),
         '/shorts': (context) => Shorts(),
         '/tabs': (context) => Tabs(),

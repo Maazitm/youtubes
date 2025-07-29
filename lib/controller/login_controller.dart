@@ -22,9 +22,9 @@ class LoginController extends GetxController {
     try {
       // Make a POST request to the login API
       final response = await http.post(
-        Uri.parse("https://krushimahostav.yuvapsvs.com/api/auth/login"), // Convert URL string to URI
+        Uri.parse("https://krushimahostav.yuvapsvs.com/api/auth/login"), 
         headers: {
-          'Content-Type': 'application/json', // ✅ Add this
+          'Content-Type': 'application/json', 
         },
         body: jsonEncode({
           "email": emailCtrl.text.trim(), // Send email as JSON

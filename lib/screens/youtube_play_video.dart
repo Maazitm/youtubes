@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
@@ -31,9 +30,6 @@ class _YoutubePlayVideoState extends State<YoutubePlayVideo> {
       });
   }
 
-
-
-
   @override
   void dispose() {
     _videoController.dispose();
@@ -62,7 +58,7 @@ class _YoutubePlayVideoState extends State<YoutubePlayVideo> {
                       ? VideoPlayer(_videoController)
                       : const Center(child: CircularProgressIndicator()),
             ),
-           VideoProgressIndicator(_videoController, allowScrubbing: true),
+            VideoProgressIndicator(_videoController, allowScrubbing: true),
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Column(

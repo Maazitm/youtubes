@@ -41,6 +41,7 @@ dependencies:
   #for offline video play
   video_player: ^2.10.0
 
+  url_launcher: ^6.2.4
 
   #use firebase in flutter application 
   firebase_core: ^2.30.0

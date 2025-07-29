@@ -14,7 +14,7 @@ class CustomContianer extends StatelessWidget {
     required this.width,
     this.Colorss = AppColor.primarycolor,
     required this.imageurl,
-    this.apnaradius = 12,
+    this.apnaradius = 12, required MaterialColor color,
   });
 
   @override

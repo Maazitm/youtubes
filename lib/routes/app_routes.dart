@@ -11,6 +11,7 @@ static const String subscriptions  ="/Subscription";
 static const String creatNewAccountScreen = "/creat_new_account";
 static const String youtubeScreen = "/youtube_screen";
 static const String youtubePlayVideo = "/YoutubePlayVideo";
+static const String dummyscreen = "/dummyscreen";
 }
 
 
