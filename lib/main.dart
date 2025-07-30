@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: token == null ? '/loginscreen' : '/dummyscreen',
+      initialRoute: token == null ? '/loginscreen' : '/tabs',
       routes: {
         '/dummyscreen': (context) => NewsScreen(),
         '/loginscreen': (context) => LoginScreen(),
